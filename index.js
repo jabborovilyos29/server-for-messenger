@@ -123,7 +123,7 @@ app.put("/update-message", async (req, res) => {
 });
 
 
-app.delete("/delete-message", async (req, res)=>{
+app.delete("/delete-message", async (req, res) =>{
     try {
       const results = await pool.query("DELETE from messages where id=$1;", 
     [req.body.id]
